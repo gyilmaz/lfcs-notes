@@ -1,6 +1,6 @@
 # LFCS Learning
 
-LFCS Learning
+LFCS Learning. This repository using docsify for development/writing the docs.
 
 ## How to run in local?
 

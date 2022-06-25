@@ -82,6 +82,7 @@
 * `tar cfP <destination>.tar <source>` : `f` (define filename), `c` (create archive), `P` (absulute names)
 * `tar czfP <destination>.tar.gz <source>` : `z` (gzip)
 * `tar tfP <file>` : `t` (list)
+* `tar acf <filename> <dir>` : `a` auto detect compression by suffix
 * `tar xf <file> -C <dir>` : `x` (extract), `C` (define directory)
 * `bzip2 --keep <file>` : bzip file and keep the orginal file
 * `gzip <filename>` : gzip `filename`

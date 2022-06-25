@@ -5,11 +5,41 @@
 * `/etc/default/grub` : grub configuration file, (default timeout)
 * `grub2-mkconfig -o /boot/grub2/grub.cfg` : generate new grub config file, (Ubuntu use `grub-mkconfig`)
 * `grub2-install <device target>` : install grub2 to target (Ubuntu use `grub-install`)
-* `systemctl set-default graphical.target` : change graphical desktop by default (Centos)
-* `systemctl get-default` : get default (Centos)
-
+* `systemctl set-default graphical.target` : change graphical desktop by default
+* `systemctl get-default` : get default
 
 ## Shutdown
 
 * `shutdown +n` : shutdown after `n` minutes
 * `shutdown -c` : cancel shutdown
+
+## Services
+
+* `systemctl enable rpcbind.service` : enable `rpcbind.service` at startup
+* `systemctl status sshd.service` : check `sshd.service` status
+* `systemctl is-enabled sshd.service` : check `sshd.service` is enabled
+* `systemctl mask httpd.service` : mask `httpd.service` (strong version of disable)
+* `systemctl daemon-reload`
+* `journalctl --unit=sshd.service -n 20 --no-pager` : show service logs
+* `journalctl -p err` : show error logs with priority flag
+* `journalctl -p info -g '<pattern>'` : show info logs and pattern
+
+## Processes
+
+* `ps lax` : all processes running & nice values
+* `ps u <pid>` : show process by pid
+* `sleep n` : halt main process n seconds
+* `<command> &` : run in background
+* `renice <new value> <pid>` : set new nice value
+* `nice -n <value> <name>` : set process `<name>` with nice `value`
+* `lsof -p <pid>` : list all files opened by pid
+* `pgrep -a <pattern>` : process grep, `a` get all
+
+### Signal
+
+* `kill -<signal> <pid>` : kill pid with signal
+  * `SIGHUP` : hang up
+
+## Scripts
+
+* `#!` : `shebang`
