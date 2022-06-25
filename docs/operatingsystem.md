@@ -40,6 +40,15 @@
 * `kill -<signal> <pid>` : kill pid with signal
   * `SIGHUP` : hang up
 
+### Cron
+
+* `crontab -l` : show cron list
+* `/var/log/cron` : cron logs
+* `anacron -n -f` : force anacron
+* `atq` : find jobs
+* `atrm <job number>` : remove job
+* `sudo crontab -e` : edit cron config, format: `<time> <command> <others>`
+
 ## Scripts
 
 * `#!` : `shebang`
