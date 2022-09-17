@@ -30,10 +30,13 @@
 * `ps u <pid>` : show process by pid
 * `sleep n` : halt main process n seconds
 * `<command> &` : run in background
+* `jobs` to see running process in a background
+* `bg <id>` to run the command to run in background 
 * `renice <new value> <pid>` : set new nice value
 * `nice -n <value> <name>` : set process `<name>` with nice `value`
 * `lsof -p <pid>` : list all files opened by pid
 * `pgrep -a <pattern>` : process grep, `a` get all
+* `fg` bring to app in a foreground to continue to process
 
 ### Signal
 
