@@ -55,7 +55,8 @@
   * `SIGHUP` : hang up
 
 ### Cron
-
+ 
+* `cat /etc/crontab` to display example
 * `crontab -l` : show cron list
 * `/var/log/cron` : cron logs
 * `anacron -n -f` : force anacron
