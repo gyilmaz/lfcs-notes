@@ -42,6 +42,9 @@
 * `ls /var/logs` root user can see the system log files
 * `which sudo` then  `journalctl /bin/sudo/` instead of taling or using grep
 * `journalctl -p` <tab> <tab>
+* `journalctl -p info -g '^b'` to see info logs begin with b
+* `journalctl -S 02:00` since option to set start time 
+ 
 
 ### Signal
 
