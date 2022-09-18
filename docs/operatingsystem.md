@@ -41,6 +41,7 @@
 ## Logs
 * `ls /var/logs` root user can see the system log files
 * `which sudo` then  `journalctl /bin/sudo/` instead of taling or using grep
+* `journalctl -p` <tab> <tab>
 
 ### Signal
 
