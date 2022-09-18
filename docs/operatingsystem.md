@@ -66,6 +66,9 @@
 * `sudo crontab -e` : edit cron config, format: `<time> <command> <others>`
 * `sudo crontab -r -u <username>` : remove crontab from a user
 * Run the scritps hourly  create `touch shellscript` ,copy  `cp shellscript /etc/cron.hourly/shellscript`  and make executable `sudo chmod +rx /etc/cron.hourly/shellscript`
+* `sudo cat /var/log/cron` to see what jobs run 
+* to schedule a run using at for root `Switch to the root user using sudo -i command, then execute command at '15:30 August 20 2024'
+Add /usr/bin/touch atscheduler line then save it by pressing CTRL+D `
  
 
 ## Scripts
