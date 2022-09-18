@@ -60,10 +60,13 @@
 * `crontab -l` : show cron list
 * `/var/log/cron` : cron logs
 * `anacron -n -f` : force anacron
+* `anacron -T` : to test if syntax is correct
 * `atq` : find jobs
 * `atrm <job number>` : remove job
 * `sudo crontab -e` : edit cron config, format: `<time> <command> <others>`
-* `sudo crontab -r -u <username>` : remove crontab from a user 
+* `sudo crontab -r -u <username>` : remove crontab from a user
+* Run the scritps hourly  create `touch shellscript` ,copy  `cp shellscript /etc/cron.hourly/shellscript`  and make executable `sudo chmod +rx /etc/cron.hourly/shellscript`
+ 
 
 ## Scripts
 
