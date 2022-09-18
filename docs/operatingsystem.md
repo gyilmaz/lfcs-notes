@@ -38,6 +38,10 @@
 * `pgrep -a <pattern>` : process grep, `a` get all
 * `fg` bring to app in a foreground to continue to process
 
+## Logs
+* `ls /var/logs` root user can see the system log files
+* `which sudo` then  `journalctl /bin/sudo/` instead of taling or using grep
+
 ### Signal
 
 * `kill -<signal> <pid>` : kill pid with signal
