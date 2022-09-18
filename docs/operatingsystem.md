@@ -63,6 +63,7 @@
 * `atq` : find jobs
 * `atrm <job number>` : remove job
 * `sudo crontab -e` : edit cron config, format: `<time> <command> <others>`
+* `sudo crontab -r -u <username>` : remove crontab from a user 
 
 ## Scripts
 
