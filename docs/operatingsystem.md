@@ -43,7 +43,10 @@
 * `which sudo` then  `journalctl /bin/sudo/` instead of taling or using grep
 * `journalctl -p` <tab> <tab>
 * `journalctl -p info -g '^b'` to see info logs begin with b
-* `journalctl -S 02:00` since option to set start time 
+* `journalctl -S 02:00` since option to set start time
+* `journalctl -S 02:00 -U 02:30` until time also can be passed 
+* `journalctl -b 0` this option displays current boot if journallogs to be saved `mkdir /var/logs/journal` can be created 
+* `last` or `lastlog` to show who login  
  
 
 ### Signal
