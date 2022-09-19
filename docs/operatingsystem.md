@@ -52,8 +52,49 @@
 ### Signal
 
 * `kill -<signal> <pid>` : kill pid with signal
-  * `SIGHUP` : hang up
+* `SIGHUP` : hang up
+ 
+###PowerTool
 
+ * `sudo dnf config-manager --enable powertools`
+ * `sudo dnf repolist --all`
+ * `dnf group list` and `sudo dnf group install 'Container Management'`
+ 
+ *` sudo dnf install nginx
+    sudo dnf group list
+    sudo dnf install 'Custom Operating System'
+    sudo dnf group install 'Container Management'
+    sudo dnf uninstall nginx
+    sudo dnf --help
+    sudo dnf remove ngnix
+    sudo dnf remove nginx
+    sudo dnf provides /bin/top
+    dnf provides nginx
+    dnf repoquery --list nginx | grep nginx-logo.png
+    dnf repoquery --list nginx | grep nginx-logo.png >> /home/bob/nginx
+    sudo dnf check-upgrade > upgrade.txt
+    sudo dnf repolist -v > verbose.txt
+    sudo dnf search "Apache HTTP Server" > webservers.txt
+    history
+    sudo dnf provides /etc/samba > forgot.txt
+    sudo dnf repoquery --list curl > curl.txt`
+ 
+
+### Get metrics
+ 
+ * `df -h`
+ * `free -h`
+ * `uptime` : how much core cpus are used first1min, first5min,last30min
+ * `systemctl list-dependencies`
+ * `du -sh /bin/` to see storage
+ * `lscpu` to see cpu cores per socket
+ * `sudo xfs_repair /dev/vdb > /home/bob/fscheck 2>&1` /dev/vdb we have an XFS filesystem. Use the correct command to check this filesystem for errors and save the output in /home/bob/fscheck file.
+ 
+ 
+ * Kernel runtime parameters 
+  `sudo sysctl -a` : display parameters
+  `sudo sysctl -w <parameter>=<0,or1> ` : to set parameter
+ 
 ### Cron
  
 * `cat /etc/crontab` to display example
