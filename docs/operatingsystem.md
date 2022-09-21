@@ -118,7 +118,7 @@ Add /usr/bin/touch atscheduler line then save it by pressing CTRL+D `
 * `#!` : `shebang`
  
  
- ##SELinux
+ ## SELinux
 
 * `ps axZ`
 * `sudo semanage user -l` 
