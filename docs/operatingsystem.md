@@ -94,6 +94,7 @@
  * Kernel runtime parameters 
   `sudo sysctl -a` : display parameters
   `sudo sysctl -w <parameter>=<0,or1> ` : to set parameter
+  `sudo sysctl -p` : make it persistent
  
 ### Cron
  
@@ -115,3 +116,9 @@ Add /usr/bin/touch atscheduler line then save it by pressing CTRL+D `
 ## Scripts
 
 * `#!` : `shebang`
+ 
+ 
+ ##SELinux
+
+* `ps axZ`
+* `sudo semanage user -l` 
