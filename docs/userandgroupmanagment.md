@@ -1,5 +1,5 @@
 
-## Setting user experation 
+## Managing users/groups 
 * `sudo usermod -e 2030-03-01 jane` : setting the expression date
 * `sudo useradd --system apachedev` : create a system account 
 * `sudo usermod -e "" jane` : setting unexpired user
