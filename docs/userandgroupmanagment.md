@@ -24,4 +24,9 @@
 * `/etc/profile.d/welcome.sh` : user messages when login
 * `sudo touch /etc/skel/README` : Whenever we create a new user in Linux the files in /etc/skel directory get copied into the user's home
 * `vi /home/bob/.bashrc` : open the config and  Update the user path variable `PATH="$HOME/.local/bin:$HOME/bin:$HOME/.config/bin:$PATH"`
-* 
+
+###
+
+*`sudo vim /etc/security/limits.conf` : to see domain,type,item limit values "*" will set default for all users 
+hard and soft limits are defined.  
+* ``
