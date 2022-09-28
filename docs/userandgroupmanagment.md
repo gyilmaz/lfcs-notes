@@ -14,3 +14,14 @@
 * `sudo usermod -L sam` : Lock the user
 * `sudo groupdel appdevs` : delete the group
 * `sudo chage -W 2 jane` : user gets password warning  2 days before pass expire
+
+
+## Manage Users Env
+* ` /etc/environment` : used to set the globally available environment variables in a Linux based system.
+* `env` : print environemnt 
+* `vi ~/.bashrc` : to add change env variables and add `export MYVAR=TRUE` then save and run `source ~/.bashrc`
+* `sudo cp /etc/skel/.bash* /home/bob/default_data/` user data
+* `/etc/profile.d/welcome.sh` : user messages when login
+* `sudo touch /etc/skel/README` : Whenever we create a new user in Linux the files in /etc/skel directory get copied into the user's home
+* `vi /home/bob/.bashrc` : open the config and  Update the user path variable `PATH="$HOME/.local/bin:$HOME/bin:$HOME/.config/bin:$PATH"`
+* 
