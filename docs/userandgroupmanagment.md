@@ -29,4 +29,16 @@
 
 *`sudo vim /etc/security/limits.conf` : to see domain,type,item limit values "*" will set default for all users 
 hard and soft limits are defined.  
-* ``
+
+### Manage User Resources
+*`sudo gpasswd -a trinity wheel` : allow user to use sudo commands
+* `sudo vi /etc/security/limits.conf` and add `trinity - nproc 30` : to limit user to run 30 process max
+* `ulimit -a` : print out all limits of the current user
+* `sudo visudo /etc/sudoers`  and add `trinity    ALL=(ALL)   NOPASSWD: ALL` : allow user to run all sudo commands without password required
+* `sudo visudo /etc/sudoers`  and add `trinity ALL=(ALL) /usr/bin/mount` : only execute with bin mount
+* `sudo vi /etc/security/limits.conf` and add `stephen hard fsize 4096` : allow only to create 4MB file
+* `sudo vi /etc/security/limits.conf` and add `@salesteam     soft    nproc     20` : set a set limit on group
+* `sudo visudo /etc/sudoers`  and add  `%salesteam     ALL=(ALL)     ALL` : sales team can run sudo command
+* `sudo visudo /etc/sudoers`  and add  `trinity   ALL=(sam)   ALL` : trinity can run command as sam
+* `sudo visudo /etc/sudoers` and add  `@developers     hard    nproc  10` : hard limit to 10 for developer group
+* `sudo visudo /etc/sudoers` and add `trinity ALL=(ALL) ALL` : password required for trinity to run sudo
