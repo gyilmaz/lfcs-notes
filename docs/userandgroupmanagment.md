@@ -42,3 +42,11 @@ hard and soft limits are defined.
 * `sudo visudo /etc/sudoers`  and add  `trinity   ALL=(sam)   ALL` : trinity can run command as sam
 * `sudo visudo /etc/sudoers` and add  `@developers     hard    nproc  10` : hard limit to 10 for developer group
 * `sudo visudo /etc/sudoers` and add `trinity ALL=(ALL) ALL` : password required for trinity to run sudo
+
+### Manage root access
+*`sudo passwd root` : to change root password
+*`/etc/pam.d/` : PAM configuration folder
+*`sudo passwd -u root` : unlock root `-l` for unclock
+*`sudo vi /etc/pam.d/su` : to update the su utility to allow disallow to request with auth, account and session
+*`sudo vi /etc/pam.d/su` and `auth           sufficient      pam_wheel.so trust use_uid` : requests from the users that are the member of the wheel group should be accepted immediately, without asking for any password
+* `sudo vi /etc/pam.d/sshd` and add `auth    required       pam_listfile.so onerr=succeed  item=user  sense=deny  file=/etc/ssh/deniedusers` : Restrict the root access to SSH service via PAM then creaate a deny file and add root user
