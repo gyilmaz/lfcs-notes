@@ -13,6 +13,13 @@
 * `nmcli`
 * `nmcli connection modify eth1 +ipv4.routes "<range> <dest>"` : add network route by device (change `+` to `-` if want to remove)
 * `nmcli device reapply eth1` : reapply config
+* `nmcli connection show` : list all connections then take the name and add autoconnections to make it dynamic
+`nmcli connection modify enp0s3 autoconnect yes`
+
+## Start,stop and check status of network services
+
+*`sudo ss -ltunp` : ss can be used  to check status of sshd(l listening, -t TCP connection, -u UDP connection, -n numberic values) (p processes sudo required to see process) "tunnel p"
+*
 
 ## Timezone
 
@@ -32,3 +39,11 @@
 ## DNS
 
 * `/etc/resolv.conf` : Add new nameserver (DNS), format: `nameserver <ip>`
+
+## Configure networking and hostname resolution statically or dynamically (CENTOS)
+
+* `ip link show` or `ip l` : display network adaptor and ip addresses configured
+* `ip address show` or `ip a` : it displays different NATs 
+* `ip route show` or `ip r` : it dispays route 
+* `cat /etc/resolv.cof` : to see nameserver
+* `ls /etc/sysconfig/network-scripts/` : look for network adapter BOOTPROTO variable none is static and dhcp is dynamic
