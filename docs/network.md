@@ -8,6 +8,9 @@
 * `ip a add <ip> <> <deviced>` : set new ip address
 * `ip route show` : show route
 * `ip route add <range> via <network device ip>` : add route
+* `ip route add <range> via <network device ip> <device name> <interface> `: add route with device and interface
+* `ip route del <range>` : delete route
+* `ip route add default via <network ip>` : adds a gateway
 * `netstat -natp` : show port listen with proccess name (tips: `-tulpn` & grep `LISTEN`)
 * `hostnamectl` : check hostname system
 * `nmcli`
@@ -29,7 +32,7 @@
 
 ## Firewall
 
-* `firewall-cmd --add-port=<port> --permanent` : add permanent listen rule tcp
+* `firewall-cmd --add-port=<port>/tcp --permanent` : add permanent listen rule tcp
 * `firewall-cmd --add-service=<services> --permanent` : allow service
 * `firewall-cmd --list-all` : list all firewall rules
 * `firewall-cmd --remove-port=<port>`: remove by port
